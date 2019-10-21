@@ -1,6 +1,6 @@
-# KB-IPST Plugin for KidBrightIDE
+# OpenKB Plugin for KidBrightIDE
 
-ปลั๊กอินเสริม เพิ่มบล็อกเกี่ยวกับบอร์ด KB-IPST ในโปรแกรม KidBrightIDE
+ปลั๊กอินเสริม เพิ่มบล็อกเกี่ยวกับบอร์ด OpenKB ในโปรแกรม KidBrightIDE
 
 ## การติดตั้ง
 
