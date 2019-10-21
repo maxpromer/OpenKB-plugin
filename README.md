@@ -4,19 +4,19 @@
 
 ## การติดตั้ง
 
-ดาวน์โหลดไฟล์ปลั๊กอินจากหน้า releases จะได้ไฟล์ KB-IPST.Plugin.for.KidBrightIDE.Vx.x.zip
+ดาวน์โหลดไฟล์ปลั๊กอินจากหน้า releases จะได้ไฟล์ OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip
 
 ### กรณีติดตั้งโปรแกรม KidBrightIDE ด้วยไฟล์ .exe
 
  1. เปิดโปรแกรม KidBrightIDE กด Plugins > Install Plugins
- 2. เลือกไฟล์ปลั๊กอิน (KB-IPST.Plugin.for.KidBrightIDE.Vx.x.zip) ที่ดาวน์โหลดไว้
- 3. โปรแกรม KidBrightIDE จะปิดแล้วเปิดใหม่ บล็อกใหม่จะอยู่ในเมนู KB-IPST
+ 2. เลือกไฟล์ปลั๊กอิน (OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip) ที่ดาวน์โหลดไว้
+ 3. โปรแกรม KidBrightIDE จะปิดแล้วเปิดใหม่ บล็อกใหม่จะอยู่ในเมนู OpenKB
 
 ### กรณีติดตั้งด้วย Gitlab
 
- 1. คลายไฟล์ KB-IPST.Plugin.for.KidBrightIDE.Vx.x.zip ออกมาด้วยโปรแกรม WinRAR หรือ 7-zip จะได้โฟลเดอร์ kb_ipst
- 2. ย้ายโฟลเดอร์ kb_ipst ไปไว้ในโฟลเดอร์ plugins ซึ่งจะอยู่ในโฟลเดอร์ kbide ณ ที่ ๆ สั่ง Clone มา
- 5. เปิดโปรแกรม KidBrightIDE ขึ้นมา จะมีเมนู KB-IPST เพิ่มขึ้นมา
+ 1. คลายไฟล์ OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip ออกมาด้วยโปรแกรม WinRAR หรือ 7-zip จะได้โฟลเดอร์ openkb
+ 2. ย้ายโฟลเดอร์ openkb ไปไว้ในโฟลเดอร์ plugins ซึ่งจะอยู่ในโฟลเดอร์ kbide ณ ที่ ๆ สั่ง Clone มา
+ 5. เปิดโปรแกรม KidBrightIDE ขึ้นมา จะมีเมนู OpenKB เพิ่มขึ้นมา
  
 ## การใช้งาน
  
