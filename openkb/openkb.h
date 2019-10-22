@@ -11,7 +11,7 @@
 #define SERVO_DUTY_MIN 1638 // 0.5mS
 #define SERVO_DUTY_MAX 8191 // 2.5mS
 
-class OPENKB : public Device {
+class OpenKB : public Device {
 	private:
 
 		// PWM
@@ -32,7 +32,7 @@ class OPENKB : public Device {
 
 	public:
 		// constructor
-		OPENKB(void);
+		OpenKB(void);
 		
 		// override
 		void init(void);

@@ -3,9 +3,9 @@
 
 #include "openkb.h"
 
-OPENKB::OPENKB(void) { }
+OpenKB::OpenKB(void) { }
 
-void OPENKB::init(void) {
+void OpenKB::init(void) {
 	// Config Timer0 to use PWM
 	ledc_timer_config_t timer_conf;
 	timer_conf.duty_resolution = LEDC_TIMER_16_BIT;
@@ -28,50 +28,50 @@ void OPENKB::init(void) {
 	initialized = true;
 }
 
-int OPENKB::prop_count(void) {
+int OpenKB::prop_count(void) {
 	// not supported
 	return 0;
 }
 
-bool OPENKB::prop_name(int index, char *name) {
+bool OpenKB::prop_name(int index, char *name) {
 	// not supported
 	return false;
 }
 
-bool OPENKB::prop_unit(int index, char *unit) {
+bool OpenKB::prop_unit(int index, char *unit) {
 	// not supported
 	return false;
 }
 
-bool OPENKB::prop_attr(int index, char *attr) {
+bool OpenKB::prop_attr(int index, char *attr) {
 	// not supported
 	return false;
 }
 
-bool OPENKB::prop_read(int index, char *value) {
+bool OpenKB::prop_read(int index, char *value) {
 	// not supported
 	return false;
 }
 
-bool OPENKB::prop_write(int index, char *value) {
+bool OpenKB::prop_write(int index, char *value) {
 	// not supported
 	return false;
 }
 
-void OPENKB::process(Driver *drv) { }
+void OpenKB::process(Driver *drv) { }
 
-int OPENKB::digitalRead(int pin) {
+int OpenKB::digitalRead(int pin) {
 	gpio_set_direction(static_cast<gpio_num_t>(pin), GPIO_MODE_INPUT);
 
 	return gpio_get_level(static_cast<gpio_num_t>(pin));
 }
 
-void OPENKB::digitalWrite(int pin, int value) {
+void OpenKB::digitalWrite(int pin, int value) {
 	gpio_set_direction(static_cast<gpio_num_t>(pin), GPIO_MODE_OUTPUT);
 	gpio_set_level(static_cast<gpio_num_t>(pin), value);
 }
 
-int OPENKB::analogRead(int pin) {
+int OpenKB::analogRead(int pin) {
 	// Pin to ADC1 channel
 	adc1_channel_t adc1_ch;
 	switch (pin) {
@@ -100,7 +100,7 @@ int OPENKB::analogRead(int pin) {
 }
 
 // analog write, copy from PWM plugin
-uint8_t OPENKB::getIndexFromPin(uint8_t pin, bool isServo) {
+uint8_t OpenKB::getIndexFromPin(uint8_t pin, bool isServo) {
 	uint8_t index = getLEDCChannelFromPin(pin);
 	if (index == 255) {
 		index = setupLEDCFromPin(pin, isServo);
@@ -108,7 +108,7 @@ uint8_t OPENKB::getIndexFromPin(uint8_t pin, bool isServo) {
 	return index;
 }
 
-uint8_t OPENKB::getLEDCChannelFromPin(uint8_t pin) {
+uint8_t OpenKB::getLEDCChannelFromPin(uint8_t pin) {
 	uint8_t index = 255;
 	for (int i=0;i<nextPointPWMConfigState;i++) {
 		if (pwmConfigState[i].pin == pin) {
@@ -119,7 +119,7 @@ uint8_t OPENKB::getLEDCChannelFromPin(uint8_t pin) {
 	return index;
 }
 
-uint8_t OPENKB::setupLEDCFromPin(uint8_t pin, bool isServo) {
+uint8_t OpenKB::setupLEDCFromPin(uint8_t pin, bool isServo) {
 	uint8_t index = nextPointPWMConfigState++;
 	
 	struct configState &config = pwmConfigState[index];
@@ -145,7 +145,7 @@ uint8_t OPENKB::setupLEDCFromPin(uint8_t pin, bool isServo) {
 	return index;
 }
 
-void OPENKB::analogWrite(int pin, int value) {
+void OpenKB::analogWrite(int pin, int value) {
 	if (value > 1023) value = 1023;
 	
 	uint8_t index = getIndexFromPin(pin);
@@ -156,7 +156,7 @@ void OPENKB::analogWrite(int pin, int value) {
 	ledc_update_duty(LEDC_HIGH_SPEED_MODE, static_cast<ledc_channel_t>(pwmConfigState[index].ledc_ch));
 }
 
-void OPENKB::servoSetAngle(int pin, int angle) {
+void OpenKB::servoSetAngle(int pin, int angle) {
 	angle = angle < 0 ? 0 : angle;
 	angle = angle > 180 ? 180 : angle;
 	
@@ -171,7 +171,7 @@ void OPENKB::servoSetAngle(int pin, int angle) {
 	ledc_update_duty(LEDC_HIGH_SPEED_MODE, static_cast<ledc_channel_t>(pwmConfigState[index].ledc_ch));
 }
 
-void OPENKB::servoCalibrate(int pin, float min, float max) {
+void OpenKB::servoCalibrate(int pin, float min, float max) {
 	int index = getIndexFromPin(pin, true);
 	pwmConfigState[index].duty.min = 0xFFFF * min / 20.0;
 	pwmConfigState[index].duty.max = 0xFFFF * max / 20.0;
