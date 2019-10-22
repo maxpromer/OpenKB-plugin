@@ -93,7 +93,7 @@ int OpenKB::analogRead(int pin) {
 		
 	}
 
-	adc1_config_width(ADC_WIDTH_BIT_10);
+	adc1_config_width(ADC_WIDTH_BIT_12);
 	adc1_config_channel_atten(adc1_ch, ADC_ATTEN_DB_11);
 
 	return adc1_get_raw(adc1_ch);
