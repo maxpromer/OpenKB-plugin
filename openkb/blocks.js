@@ -9,6 +9,8 @@ Blockly.Blocks['openkb_digital_read'] = {
 				"options": [
 					[ "IN1", "32" ],
 					[ "IN2", "33" ],
+					[ "IN3", "34" ],
+					[ "IN4", "35" ],
 					[ "DAC1", "25" ],
 					[ "18", "18" ],
 					[ "19", "19" ],
