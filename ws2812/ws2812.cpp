@@ -84,11 +84,11 @@ void WS2812::init(int length) {
 	
 	// Config RMT pin
 	this->config.gpio_num = (gpio_num_t)pin;
-	if ((pin == 26) || (pin == 27)) {
+	/* if ((pin == 26) || (pin == 27)) {
 		this->config.tx_config.idle_level = RMT_IDLE_LEVEL_HIGH;
-	} else {
+	} else {*/
 		this->config.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
-	}
+	//}
 	
 	// Setup RMT
 	rmt_config(&this->config);
@@ -110,20 +110,20 @@ void WS2812::setPixel(int n, uint32_t color) {
 	uint8_t g = (color>>8)&0xFF;
 	uint8_t b = color&0xFF;
 	
-	/*
-	ESP_LOGI("COLOR", "Before rgb(%d, %d, %d)", r, g, b);
 	
+	// ESP_LOGI("COLOR", "Before rgb(%d, %d, %d)", r, g, b);
+	/*
 	r = (float)r * (float)this->brightness / 100.0;
 	g = (float)g * (float)this->brightness / 100.0;
 	b = (float)b * (float)this->brightness / 100.0;
-	
+	*/
 	
 	r = (r * this->brightness) >> 8;
     g = (g * this->brightness) >> 8;
     b = (b * this->brightness) >> 8;
 	
-	ESP_LOGI("COLOR", "After rgb(%d, %d, %d)", r, g, b);
-	*/
+	// ESP_LOGI("COLOR", "After rgb(%d, %d, %d)", r, g, b);
+	
 	
 	this->setPixel(n, r, g, b);
 }
@@ -175,13 +175,14 @@ void WS2812::show() {
 	*/
 	
 	// Timing from ESP32 Core for Arduino
+	/*
 	if ((pin == 26) || (pin == 27)) {
 		bit0 = {{{ 32, 0, 64, 1 }}};  //Logical 0
 		bit1 = {{{ 64, 0, 32, 1 }}};  //Logical 1
-	} else {
+	} else {*/
 		bit0 = {{{ 32, 1, 64, 0 }}};  //Logical 0
 		bit1 = {{{ 64, 1, 32, 0 }}};  //Logical 1
-	}
+	//}
 	
 	uint32_t nex_item = 0;
 	for (int inx=0;inx<(this->length * 3);inx++) {
