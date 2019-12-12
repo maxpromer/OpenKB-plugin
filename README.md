@@ -1,20 +1,20 @@
-# OpenKB Plugin for KidBrightIDE
-
 ปลั๊กอินเสริม เพิ่มบล็อกเกี่ยวกับบอร์ด OpenKB ในโปรแกรม KidBrightIDE
+
+![ส่วนประกอบของบอร์ด OpenKB](https://www.img.in.th/images/ca4d8aaf1df9e5cd653e57c95ac77b6b.jpg)
 
 ## การติดตั้ง
 
-ดาวน์โหลดไฟล์ปลั๊กอินจากหน้า releases จะได้ไฟล์ OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip
+ดาวน์โหลดไฟล์ปลั๊กอินจากส่วนล่างของหน้านี้ จะได้ไฟล์ openkb_vx.x.x.zip
 
 ### กรณีติดตั้งโปรแกรม KidBrightIDE ด้วยไฟล์ .exe
 
  1. เปิดโปรแกรม KidBrightIDE กด Plugins > Install Plugins
- 2. เลือกไฟล์ปลั๊กอิน (OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip) ที่ดาวน์โหลดไว้
+ 2. เลือกไฟล์ปลั๊กอิน (openkb_vx.x.x.zip) ที่ดาวน์โหลดไว้
  3. โปรแกรม KidBrightIDE จะปิดแล้วเปิดใหม่ บล็อกใหม่จะอยู่ในเมนู OpenKB
 
 ### กรณีติดตั้งด้วย Gitlab
 
- 1. คลายไฟล์ OpenKB.Plugin.for.KidBrightIDE.Vx.x.zip ออกมาด้วยโปรแกรม WinRAR หรือ 7-zip จะได้โฟลเดอร์ openkb
+ 1. คลายไฟล์ openkb_vx.x.x.zip ออกมาด้วยโปรแกรม WinRAR หรือ 7-zip จะได้โฟลเดอร์ openkb
  2. ย้ายโฟลเดอร์ openkb ไปไว้ในโฟลเดอร์ plugins ซึ่งจะอยู่ในโฟลเดอร์ kbide ณ ที่ ๆ สั่ง Clone มา
  5. เปิดโปรแกรม KidBrightIDE ขึ้นมา จะมีเมนู OpenKB เพิ่มขึ้นมา
  
@@ -26,9 +26,9 @@
 
 | บล็อกภาษาไทย | บล็อกภาษาอังกฤษ |
 |--|--|
-| ![บล็อกอ่านค่าดิจิทัล](https://www.img.in.th/images/8308365051e3252c0f8ca72f74c417fd.png) | ![digital read](https://www.img.in.th/images/a0d25099e1eacfab73061f62382bd188.png) |ฃ
+| ![บล็อกอ่านค่าดิจิทัล](https://www.img.in.th/images/8308365051e3252c0f8ca72f74c417fd.png) | ![digital read](https://www.img.in.th/images/a0d25099e1eacfab73061f62382bd188.png) |
 
-ใช้อ่านค่าดิจิทัลจากช่อง IN1 IN2 DAC1 18 19 23 และ 17 โดยบล็อกจะให้ค่าเป็นตัวเลข 0 หรือ 1
+ใช้อ่านค่าดิจิทัลจากช่อง IN1 IN2 IN3 IN4 DAC1 18 19 23 และ 17 โดยบล็อกจะให้ค่าเป็นตัวเลข 0 หรือ 1
 
 ### บล็อกเขียนค่าดิจิทัล
 
