@@ -1,3 +1,5 @@
+# OpenKB Plugin for KidBrightIDE
+
 ปลั๊กอินเสริม เพิ่มบล็อกเกี่ยวกับบอร์ด OpenKB ในโปรแกรม KidBrightIDE
 
 ![ส่วนประกอบของบอร์ด OpenKB](https://www.img.in.th/images/ca4d8aaf1df9e5cd653e57c95ac77b6b.jpg)
