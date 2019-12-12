@@ -21,6 +21,7 @@ class WS2812 : public Device {
 		int pin, length;
 		rmt_config_t config;
 		uint8_t brightness;
+		uint8_t colorMode = 0; // 0 = GRB, 1 = RGB
 
 	public:
 		// constructor
@@ -37,10 +38,13 @@ class WS2812 : public Device {
 		bool prop_write(int index, char *value);
 		
 		// method
-		void init(int length) ;
+		void init(int length, uint8_t mode = 0) ;
+		void setColorMode(uint8_t mode) ;
 		void setBrightness(double brightness) ;
 		void setPixel(int n, uint32_t color) ;
 		void setPixel(int n, uint8_t r, uint8_t g, uint8_t b) ;
+		void fill(uint32_t color) ;
+		void fill(uint8_t r, uint8_t g, uint8_t b) ;
 		void show() ;
 		void clear() ;
 		

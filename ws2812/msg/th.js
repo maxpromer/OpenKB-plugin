@@ -1,8 +1,23 @@
-Blockly.Msg.ADS1015_READ_ANALOG_MESSAGE = "อ่านค่าแอนะล็อกที่ขา %1";
-Blockly.Msg.ADS1015_READ_ANALOG_TOOLTIP = "อ่านค่าแอนะล็อกความละเอียด 12 บิต ( 0-2047) จาก KB Chain 4-CH 12-BIT ADC";
+Blockly.Msg.NEOPIXEL_INIT_MESSAGE = "NeoPixel เริ่มต้นใช้งานที่ขา %1 ความยาว %2 ดวง โหมดสี %3";
+Blockly.Msg.NEOPIXEL_INIT_TOOLTIP = "";
 
-Blockly.Msg.ADS1015_SET_GAIN_MESSAGE = "กำหนดแรงดันเต็มสเกลเป็น %1";
-Blockly.Msg.ADS1015_SET_GAIN_TOOLTIP = "กำหนดค่าแรงดันสูงสุดที่ KB Chain 4-CH 12-BIT ADC สามารถวัดได้";
+Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_MESSAGE = "NeoPixel ขา %1 กำหนดความสว่าง %2 %";
+Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_TOOLTIP = "";
 
-Blockly.Msg.ADS1015_READ_VOLTAGE_MESSAGE = "อ่านค่าแรงดันไฟฟ้าที่ขา %1";
-Blockly.Msg.ADS1015_READ_VOLTAGE_TOOLTIP = "อ่านค่าแรงดันไฟฟ้าจาก KB Chain 4-CH 12-BIT ADC";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_MESSAGE = "NeoPixel ขา %1 กำหนดดวงที่ %2 เป็นสี %3";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_MESSAGE = "NeoPixel ขา %1 กำหนดดวงที่ %2 เป็นสี rgb( %3 , %4 , %5 )";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_FILL_MESSAGE = "NeoPixel ขา %1 กำหนดสีทุกดวงเป็น %2";
+Blockly.Msg.NEOPIXEL_FILL_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_FILL_RGB_MESSAGE = "NeoPixel ขา %1 กำหนดสีทุกดวงเป็น rgb( %2 , %3 , %4 )";
+Blockly.Msg.NEOPIXEL_FILL_RGB_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_SHOW_MESSAGE = "NeoPixel ขา %1 แสดงผล";
+Blockly.Msg.NEOPIXEL_SHOW_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_CLEAR_MESSAGE = "NeoPixel ขา %1 ล้างค่า";
+Blockly.Msg.NEOPIXEL_CLEAR_TOOLTIP = "";

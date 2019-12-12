@@ -68,7 +68,7 @@ bool WS2812::prop_write(int index, char *value) {
 
 void WS2812::process(Driver *drv) { }
 
-void WS2812::init(int length) {
+void WS2812::init(int length, uint8_t mode) {
 	this->length = length;
 	
 	// GPIO config
@@ -95,46 +95,76 @@ void WS2812::init(int length) {
 	rmt_driver_install(this->config.channel, 0, 0);
 	rmt_set_source_clk(this->config.channel, RMT_BASECLK_APB); // Use clock from APB 80MHz
 	
+	this->setColorMode(mode);
+	
 	this->clear();
 }
 
+void WS2812::setColorMode(uint8_t mode) {
+	if (mode > 1) mode = 1;
+	
+	this->colorMode = mode;
+}
+
 void WS2812::setBrightness(double brightness) {
-	fmin(brightness, 100);
-	fmax(brightness, 0);
+	this->brightness = fmin(brightness, 100);
+	this->brightness = fmax(brightness, 0);
 	
 	this->brightness = brightness;
 }
 
 void WS2812::setPixel(int n, uint32_t color) {
+	if (n >= this->length) return;
+	
 	uint8_t r = (color>>16)&0xFF;
 	uint8_t g = (color>>8)&0xFF;
 	uint8_t b = color&0xFF;
 	
-	
-	// ESP_LOGI("COLOR", "Before rgb(%d, %d, %d)", r, g, b);
-	/*
 	r = (float)r * (float)this->brightness / 100.0;
 	g = (float)g * (float)this->brightness / 100.0;
 	b = (float)b * (float)this->brightness / 100.0;
-	*/
 	
-	r = (r * this->brightness) >> 8;
-    g = (g * this->brightness) >> 8;
-    b = (b * this->brightness) >> 8;
-	
-	// ESP_LOGI("COLOR", "After rgb(%d, %d, %d)", r, g, b);
-	
-	
-	this->setPixel(n, r, g, b);
+	int inx = n * 3;
+	if (this->colorMode == 0) { // mode GRB
+		this->colorBlock[inx + 0] = g;
+		this->colorBlock[inx + 1] = r;
+		this->colorBlock[inx + 2] = b;
+	} else {
+		this->colorBlock[inx + 0] = r;
+		this->colorBlock[inx + 1] = g;
+		this->colorBlock[inx + 2] = b;
+	}
 }
 
 void WS2812::setPixel(int n, uint8_t r, uint8_t g, uint8_t b) {
 	if (n >= this->length) return;
 	
+	r = (float)r * (float)this->brightness / 100.0;
+	g = (float)g * (float)this->brightness / 100.0;
+	b = (float)b * (float)this->brightness / 100.0;
+	
 	int inx = n * 3;
-	this->colorBlock[inx + 0] = g;
-	this->colorBlock[inx + 1] = r;
-	this->colorBlock[inx + 2] = b;
+	if (this->colorMode == 0) { // mode GRB
+		this->colorBlock[inx + 0] = g;
+		this->colorBlock[inx + 1] = r;
+		this->colorBlock[inx + 2] = b;
+	} else {
+		this->colorBlock[inx + 0] = r;
+		this->colorBlock[inx + 1] = g;
+		this->colorBlock[inx + 2] = b;
+	}
+}
+
+void WS2812::fill(uint32_t color) {
+	for (int i=0;i<this->length;i++) {
+		this->setPixel(i, color);
+	}
+}
+
+void WS2812::fill(uint8_t r, uint8_t g, uint8_t b) {
+	for (int i=0;i<this->length;i++) {
+		this->setPixel(i, r, g, b);
+	}
 }
 
 void WS2812::show() {
@@ -186,7 +216,7 @@ void WS2812::show() {
 	
 	uint32_t nex_item = 0;
 	for (int inx=0;inx<(this->length * 3);inx++) {
-		for (int i=0;i<8;i++) {
+		for (int i=7;i>=0;i--) {
 			if (this->colorBlock[inx]&(1<<i)) {
 				items[nex_item] = bit1;
 			} else {

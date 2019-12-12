@@ -1,8 +1,23 @@
-Blockly.Msg.ADS1015_READ_ANALOG_MESSAGE = "Read analog pin %1";
-Blockly.Msg.ADS1015_READ_ANALOG_TOOLTIP = "Read analog 12 bit from KB Chain 4-CH 12-BIT ADC";
+Blockly.Msg.NEOPIXEL_INIT_MESSAGE = "NeoPixel initialize pin %1 length %2 mode %3";
+Blockly.Msg.NEOPIXEL_INIT_TOOLTIP = "";
 
-Blockly.Msg.ADS1015_SET_GAIN_MESSAGE = "Set full-scale to %1";
-Blockly.Msg.ADS1015_SET_GAIN_TOOLTIP = "Set maximum input voltage";
+Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_MESSAGE = "NeoPixel pin %1 set brightness %2 %";
+Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_TOOLTIP = "";
 
-Blockly.Msg.ADS1015_READ_VOLTAGE_MESSAGE = "Read voltage pin %1";
-Blockly.Msg.ADS1015_READ_VOLTAGE_TOOLTIP = "Read voltage from KB Chain 4-CH 12-BIT ADC";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_MESSAGE = "NeoPixel pin %1 set pixel %2 color %3";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_MESSAGE = "NeoPixel pin %1 set pixel %2 color rgb( %3 , %4 , %5 )";
+Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_FILL_MESSAGE = "NeoPixel pin %1 fill all LED color %2";
+Blockly.Msg.NEOPIXEL_FILL_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_FILL_RGB_MESSAGE = "NeoPixel pin %1 fill all LED color rgb( %2 , %3 , %4 )";
+Blockly.Msg.NEOPIXEL_FILL_RGB_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_SHOW_MESSAGE = "NeoPixel pin %1 show";
+Blockly.Msg.NEOPIXEL_SHOW_TOOLTIP = "";
+
+Blockly.Msg.NEOPIXEL_CLEAR_MESSAGE = "NeoPixel pin %1 clear";
+Blockly.Msg.NEOPIXEL_CLEAR_TOOLTIP = "";
