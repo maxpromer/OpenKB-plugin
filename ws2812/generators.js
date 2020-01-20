@@ -22,6 +22,7 @@ Blockly.JavaScript['neopixel_set_pixel'] = function(block) {
 };
 
 Blockly.JavaScript['neopixel_set_pixel_rgb'] = function(block) {
+	var dropdown_pin = block.getFieldValue('pin');
 	var value_n = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
 	var value_red = Blockly.JavaScript.valueToCode(block, 'red', Blockly.JavaScript.ORDER_ATOMIC) || '0';
 	var value_green = Blockly.JavaScript.valueToCode(block, 'green', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -38,6 +39,7 @@ Blockly.JavaScript['neopixel_fill'] = function(block) {
 };
 
 Blockly.JavaScript['neopixel_fill_rgb'] = function(block) {
+	var dropdown_pin = block.getFieldValue('pin');
 	var value_red = Blockly.JavaScript.valueToCode(block, 'red', Blockly.JavaScript.ORDER_ATOMIC) || '0';
 	var value_green = Blockly.JavaScript.valueToCode(block, 'green', Blockly.JavaScript.ORDER_ATOMIC) || '0';
 	var value_blue = Blockly.JavaScript.valueToCode(block, 'blue', Blockly.JavaScript.ORDER_ATOMIC) || '0';
