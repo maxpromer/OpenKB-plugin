@@ -5,7 +5,7 @@ Blockly.Msg.OPENKB_DIGITAL_WRITE_MESSAGE = "digital write pin %1 to %2";
 Blockly.Msg.OPENKB_DIGITAL_WRITE_TOOLTIP = "Write digital value to pin on OpenKB";
 
 Blockly.Msg.OPENKB_ANALOG_READ_MESSAGE = "analog read pin %1";
-Blockly.Msg.OPENKB_ANALOG_READ_TOOLTIP = "Read analog value 0-1023 from pin on OpenKB";
+Blockly.Msg.OPENKB_ANALOG_READ_TOOLTIP = "Read analog value 0-4095 from pin on OpenKB";
 
 Blockly.Msg.OPENKB_ANALOG_WRITE_MESSAGE = "analog write pin %1 to %2";
 Blockly.Msg.OPENKB_ANALOG_WRITE_TOOLTIP = "Write analog value 0-1023 to pin on OpenKB";
