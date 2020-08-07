@@ -61,6 +61,17 @@ Blockly.Blocks['openkb_digital_write'] = {
 			"tooltip": Blockly.Msg.OPENKB_DIGITAL_WRITE_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
+	},
+	xmlToolbox: function() {
+		return `
+		<block type="openkb_digital_write">
+		  	<value name="value">
+				<shadow type="math_number">
+					<field name="VALUE">1</field>
+				</shadow>
+			</value>
+		</block>
+		`;
 	}
 };
 
@@ -119,6 +130,17 @@ Blockly.Blocks['openkb_analog_write'] = {
 			"tooltip": Blockly.Msg.OPENKB_ANALOG_WRITE_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
+	},
+	xmlToolbox: function() {
+		return `
+		<block type="openkb_analog_write">
+		  	<value name="value">
+				<shadow type="math_number">
+					<field name="VALUE">1023</field>
+				</shadow>
+			</value>
+		</block>
+		`;
 	}
 };
 
@@ -151,6 +173,17 @@ Blockly.Blocks['openkb_servo'] = {
 			"tooltip": Blockly.Msg.OPENKB_SERVO_TOOLTIP,
 			"helpUrl": ""
 		});
+	},
+	xmlToolbox: function() {
+		return `
+		<block type="openkb_servo">
+		  	<value name="angle">
+				<shadow type="math_number">
+					<field name="VALUE">90</field>
+				</shadow>
+			</value>
+		</block>
+		`;
 	}
 };
 
