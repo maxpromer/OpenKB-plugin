@@ -1,7 +1,7 @@
-Blockly.Blocks["neopixel_init"] = {
+Blockly.Blocks["ws2812i_init"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_INIT_MESSAGE,
+			"message0": Blockly.Msg.WS2812_INIT_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -31,16 +31,16 @@ Blockly.Blocks["neopixel_init"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_INIT_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_INIT_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_set_brightness"] = {
+Blockly.Blocks["ws2812i_set_brightness"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_MESSAGE,
+			"message0": Blockly.Msg.WS2812_SET_BRIGHTNESS_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -62,16 +62,16 @@ Blockly.Blocks["neopixel_set_brightness"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_SET_BRIGHTNESS_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_SET_BRIGHTNESS_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_set_pixel"] = {
+Blockly.Blocks["ws2812i_set_pixel"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_SET_PIXEL_MESSAGE,
+			"message0": Blockly.Msg.WS2812_SET_PIXEL_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -97,16 +97,16 @@ Blockly.Blocks["neopixel_set_pixel"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_SET_PIXEL_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_SET_PIXEL_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_set_pixel_rgb"] = {
+Blockly.Blocks["ws2812i_set_pixel_rgb"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_MESSAGE,
+			"message0": Blockly.Msg.WS2812_SET_PIXEL_RGB_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -140,16 +140,16 @@ Blockly.Blocks["neopixel_set_pixel_rgb"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_SET_PIXEL_RGB_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_SET_PIXEL_RGB_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_fill"] = {
+Blockly.Blocks["ws2812i_fill"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_FILL_MESSAGE,
+			"message0": Blockly.Msg.WS2812_FILL_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -171,16 +171,16 @@ Blockly.Blocks["neopixel_fill"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_FILL_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_FILL_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_fill_rgb"] = {
+Blockly.Blocks["ws2812i_fill_rgb"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_FILL_RGB_MESSAGE,
+			"message0": Blockly.Msg.WS2812_FILL_RGB_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -210,16 +210,16 @@ Blockly.Blocks["neopixel_fill_rgb"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_FILL_RGB_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_FILL_RGB_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_show"] = {
+Blockly.Blocks["ws2812i_show"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_SHOW_MESSAGE,
+			"message0": Blockly.Msg.WS2812_SHOW_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -237,16 +237,16 @@ Blockly.Blocks["neopixel_show"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_SHOW_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_SHOW_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
 };
 
-Blockly.Blocks["neopixel_clear"] = {
+Blockly.Blocks["ws2812i_clear"] = {
 	init: function() {
 		this.jsonInit({
-			"message0": Blockly.Msg.NEOPIXEL_CLEAR_MESSAGE,
+			"message0": Blockly.Msg.WS2812_CLEAR_MESSAGE,
 			"args0": [{
 				"type": "field_dropdown",
 				"name": "pin",
@@ -264,7 +264,7 @@ Blockly.Blocks["neopixel_clear"] = {
 			"previousStatement": null,
 			"nextStatement": null,
 			"colour": 75,
-			"tooltip": Blockly.Msg.NEOPIXEL_CLEAR_TOOLTIP,
+			"tooltip": Blockly.Msg.WS2812_CLEAR_TOOLTIP,
 			"helpUrl": "https://www.inex.co.th/"
 		});
 	}
