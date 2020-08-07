@@ -58,3 +58,17 @@ Blockly.JavaScript['ws2812i_clear'] = function(block) {
 	var code = 'DEV_IO.WS2812(' + dropdown_pin + ').clear();\n';
 	return code;
 };
+
+Blockly.JavaScript['ws2812i_rainbow'] = function(block) {
+	var dropdown_pin = block.getFieldValue('pin');
+	var value_delay = Blockly.JavaScript.valueToCode(block, 'delay', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+	var code = `DEV_IO.WS2812(${dropdown_pin}).rainbow(${value_delay});\n`;
+	return code;
+};
+
+Blockly.JavaScript['ws2812i_rainbow_cycle'] = function(block) {
+	var dropdown_pin = block.getFieldValue('pin');
+	var value_delay = Blockly.JavaScript.valueToCode(block, 'delay', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+	var code = `DEV_IO.WS2812(${dropdown_pin}).rainbowCycle(${value_delay});\n`;
+	return code;
+};

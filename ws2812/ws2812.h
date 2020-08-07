@@ -23,6 +23,9 @@ class WS2812 : public Device {
 		uint8_t brightness;
 		uint8_t colorMode = 0; // 0 = GRB, 1 = RGB
 
+		uint32_t Wheel(uint8_t WheelPos) ;
+		uint32_t color(uint8_t r, uint8_t g, uint8_t b) ;
+
 	public:
 		// constructor
 		WS2812(int pin) ;
@@ -47,6 +50,9 @@ class WS2812 : public Device {
 		void fill(uint8_t r, uint8_t g, uint8_t b) ;
 		void show() ;
 		void clear() ;
+
+		void rainbow(uint32_t ms) ;
+		void rainbowCycle(uint32_t ms) ;
 		
 };
 

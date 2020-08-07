@@ -21,3 +21,9 @@ Blockly.Msg.WS2812_SHOW_TOOLTIP = "";
 
 Blockly.Msg.WS2812_CLEAR_MESSAGE = "iRGBLED pin %1 clear";
 Blockly.Msg.WS2812_CLEAR_TOOLTIP = "";
+
+Blockly.Msg.WS2812_RAINBOW_MESSAGE = "iRGBLED pin %1 rainbow Time(ms) %2";
+Blockly.Msg.WS2812_RAINBOW_TOOLTIP = "";
+
+Blockly.Msg.WS2812_RAINBOW_CYCLE_MESSAGE = "iRGBLED pin %1 rainbow cycle Time(ms) %2";
+Blockly.Msg.WS2812_RAINBOW_CYCLE_TOOLTIP = "";

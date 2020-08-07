@@ -236,4 +236,43 @@ void WS2812::clear() {
 	this->show();
 }
 
+uint32_t WS2812::Wheel(uint8_t WheelPos) {
+	WheelPos = 255 - WheelPos;
+	if (WheelPos < 85) {
+		return this->color(255 - WheelPos * 3, 0, WheelPos * 3);
+	}
+
+	if (WheelPos < 170) {
+		WheelPos -= 85;
+		return this->color(0, WheelPos * 3, 255 - WheelPos * 3);
+	}
+
+	WheelPos -= 170;
+	return this->color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void WS2812::rainbow(uint32_t ms) {
+	for (uint16_t j = 0; j < 256; j++) {
+		for (uint16_t i = 0; i < this->length; i++) {
+			this->setPixel(i, Wheel((i + j) & 255));
+		}
+		this->show();
+		vTaskDelay(ms / portTICK_RATE_MS);
+	}
+}
+
+void WS2812::rainbowCycle(uint32_t ms) {
+	for (uint16_t m = 0; m < 256 * 5; m++) {  // 5 cycles of all colors on wheel
+		for (uint16_t k = 0; k < this->length; k++) {
+			this->setPixel(k, Wheel(((k * 256 / this->length) + m) & 255));
+		}
+		this->show();
+		vTaskDelay(ms / portTICK_RATE_MS);
+	}
+}
+
+uint32_t WS2812::color(uint8_t r, uint8_t g, uint8_t b) {
+	return ((uint32_t) r << 16) | ((uint32_t) g << 8) | ((uint32_t) b);
+}
+
 #endif

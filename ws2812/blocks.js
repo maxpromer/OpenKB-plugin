@@ -339,4 +339,87 @@ Blockly.Blocks["ws2812i_clear"] = {
 	}
 };
 
+Blockly.Blocks["ws2812i_rainbow"] = {
+	init: function() {
+		this.jsonInit({
+			"message0": Blockly.Msg.WS2812_RAINBOW_MESSAGE,
+			"args0": [{
+				"type": "field_dropdown",
+				"name": "pin",
+				"options": [
+					[ "OUT1", "26" ],
+					[ "OUT2", "27" ],
+					[ "DAC1", "25" ],
+					[ "18", "18" ],
+					[ "19", "19" ],
+					[ "23", "23" ],
+					[ "17", "17" ]
+				]
+			}, {
+				"type": "input_value",
+				"name": "delay",
+				"check": "Number"
+			}],
+			"inputsInline": true,
+			"previousStatement": null,
+			"nextStatement": null,
+			"colour": 75,
+			"tooltip": Blockly.Msg.WS2812_RAINBOW_TOOLTIP,
+			"helpUrl": "https://www.inex.co.th/"
+		});
+	},
+	xmlToolbox: function() {
+		return `
+		<block type="ws2812i_rainbow">
+		  	<value name="delay">
+				<shadow type="math_number">
+					<field name="VALUE">25</field>
+				</shadow>
+			</value>
+		</block>
+		`;
+	}
+};
+
+Blockly.Blocks["ws2812i_rainbow_cycle"] = {
+	init: function() {
+		this.jsonInit({
+			"message0": Blockly.Msg.WS2812_RAINBOW_CYCLE_MESSAGE,
+			"args0": [{
+				"type": "field_dropdown",
+				"name": "pin",
+				"options": [
+					[ "OUT1", "26" ],
+					[ "OUT2", "27" ],
+					[ "DAC1", "25" ],
+					[ "18", "18" ],
+					[ "19", "19" ],
+					[ "23", "23" ],
+					[ "17", "17" ]
+				]
+			}, {
+				"type": "input_value",
+				"name": "delay",
+				"check": "Number"
+			}],
+			"inputsInline": true,
+			"previousStatement": null,
+			"nextStatement": null,
+			"colour": 75,
+			"tooltip": Blockly.Msg.WS2812_RAINBOW_CYCLE_TOOLTIP,
+			"helpUrl": "https://www.inex.co.th/"
+		});
+	},
+	xmlToolbox: function() {
+		return `
+		<block type="ws2812i_rainbow_cycle">
+		  	<value name="delay">
+				<shadow type="math_number">
+					<field name="VALUE">25</field>
+				</shadow>
+			</value>
+		</block>
+		`;
+	}
+};
 

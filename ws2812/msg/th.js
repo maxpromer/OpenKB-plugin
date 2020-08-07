@@ -21,3 +21,9 @@ Blockly.Msg.WS2812_SHOW_TOOLTIP = "";
 
 Blockly.Msg.WS2812_CLEAR_MESSAGE = "iRGBLED ขา %1 ล้างค่า";
 Blockly.Msg.WS2812_CLEAR_TOOLTIP = "";
+
+Blockly.Msg.WS2812_RAINBOW_MESSAGE = "iRGBLED ขา %1 สว่างไล่สี หน่วงเวลา (ms) %2";
+Blockly.Msg.WS2812_RAINBOW_TOOLTIP = "";
+
+Blockly.Msg.WS2812_RAINBOW_CYCLE_MESSAGE = "iRGBLED ขา %1 สว่างไล่สีแบบวงรอบ หน่วงเวลา (ms) %2";
+Blockly.Msg.WS2812_RAINBOW_CYCLE_TOOLTIP = "";
